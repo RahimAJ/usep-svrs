@@ -7,10 +7,10 @@ $violations_array = mysqli_query($conn, "SELECT * FROM violations");
 ?>
 
 <div class="container mt-4">
-    <table id="example" class="table table-striped table-bordered" style="width:100%">
+    <table id="datatable" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
-                <th>Violation No.</th>
+                <th style="width: 13%">Violation No.</th>
                 <th>Student ID</th>
                 <th>Details</th>
                 <th>Date Created</th>
@@ -39,6 +39,6 @@ $violations_array = mysqli_query($conn, "SELECT * FROM violations");
 <?php include('templates/footer.php') ?>
 <script>
     $(document).ready(function() {
-        $('#example').DataTable();
+        $('#datatable').DataTable();
     });
 </script>

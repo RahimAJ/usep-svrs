@@ -7,7 +7,7 @@ $violations_array = mysqli_query($conn, "SELECT * FROM courses");
 ?>
 
 <div class="container mt-4">
-    <table id="example" class="table table-striped table-bordered" style="width:100%">
+    <table id="datatable" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
                 <th>Course ID</th>
@@ -17,8 +17,8 @@ $violations_array = mysqli_query($conn, "SELECT * FROM courses");
             </tr>
         </thead>
         <tbody>
-            <?php while ($row = mysqli_fetch_array($violations_array)) {?>
-                <tr onclick="window.location='courses.php?course-id=<?php echo $row['id']; ?>'">
+            <?php while ($row = mysqli_fetch_array($violations_array)) { ?>
+                <tr onclick="window.location='courses.php?course-id=<?php echo $row['course_id']; ?>'">
                     <td><?php echo $row['course_id']; ?></td>
                     <td><?php echo $row['course_name']; ?></td>
                     <td>
@@ -47,6 +47,6 @@ $violations_array = mysqli_query($conn, "SELECT * FROM courses");
 <?php include('templates/footer.php') ?>
 <script>
     $(document).ready(function() {
-        $('#example').DataTable();
+        $('#datatable').DataTable();
     });
 </script>

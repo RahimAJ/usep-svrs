@@ -12,8 +12,8 @@ if (!isset($_SESSION['u_uid'])) {
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <base href="http://localhost/usep-svrs/" />
-    
-    <title>Office of Student Affairs and Services - Student Violation Report System</title>
+
+    <title>Office of Student Affairs and Services - Student Violation Record System</title>
     <meta content="" name="descriptison">
     <meta content="" name="keywords">
 
