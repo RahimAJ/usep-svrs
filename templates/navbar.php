@@ -7,24 +7,24 @@
     <div class="collapse navbar-collapse" id="navbarColor03">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="home.php">Home<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="./home.php">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="violations.php">Violations</a>
+                <a class="nav-link" href="./violations.php">Violations</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="student-list.php">Student List</a>
+                <a class="nav-link" href="./student-list.php">Student List</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="courses.php">Courses</a>
+                <a class="nav-link" href="./courses.php">Courses</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Account</a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="profile.php">Profile</a>
-                    <a class="dropdown-item" href="change-password.php">Change Password</a>
+                    <a class="dropdown-item" href="./account/profile.php">Profile</a>
+                    <a class="dropdown-item" href="./account/change-password.php">Change Password</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="includes/logout-inc.php">Log Out</a>
+                    <a class="dropdown-item" href="./includes/logout-inc.php">Log Out</a>
                 </div>
             </li>
         </ul>
