@@ -22,7 +22,7 @@ echo '</script>';
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Office of Student Affairs and Services - Student Violation Report System</title>
+    <title>Office of Student Affairs and Services - Student Violation Record System</title>
     <meta content="" name="descriptison">
     <meta content="" name="keywords">
 
@@ -40,10 +40,11 @@ echo '</script>';
 
     <div class="container">
         <div class="div-center">
-            <div class="content col-md-4 pt-5 mx-auto">
+            <div class="content col-md-6 mt-5 p-4 mx-auto border rounded-lg shadow">
                 <div class="text-center">
+                    <br>
                     <img class="img-fluid" src="assets/img/osas_logo.png" style="max-width:35%;">
-                    <h5>
+                    <h5 class="pt-3">
                         Office of the Student Affairs <br>and Services
                     </h5>
                     <p style="color:maroon">
@@ -61,7 +62,7 @@ echo '</script>';
                         <label for="password">Password</label>
                         <input name="password" type="password" class="form-control" id="password">
                     </div>
-                    <button name="login-submit" type="submit" class="btn btn-primary float-right">Login</button>
+                    <button name="login-submit" type="submit" class="btn mt-4 btn-primary btn-block">LOGIN</button>
                     <!-- <hr />
                 <button type="button" class="btn btn-link">Signup</button>
                 <button type="button" class="btn btn-link">Reset Password</button> -->

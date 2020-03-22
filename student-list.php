@@ -7,6 +7,7 @@ $violations_array = mysqli_query($conn, "SELECT * FROM students");
 ?>
 
 <div class="container mt-4">
+  <h3>Student List</h3>
   <table id="datatable" class="table table-striped table-bordered" style="width:100%">
     <thead>
       <tr>

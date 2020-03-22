@@ -7,6 +7,7 @@ $violations_array = mysqli_query($conn, "SELECT * FROM violations");
 ?>
 
 <div class="container mt-4">
+    <h3>Violations</h3>
     <table id="datatable" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
