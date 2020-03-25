@@ -40,7 +40,7 @@ echo '</script>';
 
     <div class="container">
         <div class="div-center">
-            <div class="content col-md-6 mt-5 p-4 mx-auto border rounded-lg shadow">
+            <div class="content col-md-6 my-5 p-4 mx-auto border rounded-lg shadow">
                 <div class="text-center">
                     <br>
                     <img class="img-fluid" src="assets/img/osas_logo.png" style="max-width:35%;">
@@ -63,9 +63,6 @@ echo '</script>';
                         <input name="password" type="password" class="form-control" id="password">
                     </div>
                     <button name="login-submit" type="submit" class="btn mt-4 btn-primary btn-block">LOGIN</button>
-                    <!-- <hr />
-                <button type="button" class="btn btn-link">Signup</button>
-                <button type="button" class="btn btn-link">Reset Password</button> -->
                 </form>
             </div>
             </span>

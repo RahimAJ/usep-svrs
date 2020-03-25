@@ -12,22 +12,22 @@
   </div>
 
   <hr />
-  <form class="col-8 mx-auto">
+  <form action="includes/profile-inc.php" method="POST" class="col-8 mx-auto">
     <fieldset id="formedit" disabled>
       <div class="form-group">
         <label for="usernameProf">Username</label>
-        <input type="text" class="form-control" id="usernameProf" value="<?php echo $_SESSION['u_uid'] ?>">
+        <input name="usernameProf" type="text" class="form-control" id="usernameProf" value="<?php echo $_SESSION['u_uid'] ?>">
       </div>
       <div class="form-group">
         <label for="lastnameProf">Surname</label>
-        <input type="text" class="form-control" id="lastnameProf" value="<?php echo $_SESSION['u_last'] ?>">
+        <input name="lastnameProf" type="text" class="form-control" id="lastnameProf" value="<?php echo $_SESSION['u_last'] ?>">
       </div>
       <div class="form-group">
         <label for="name">Given Name</label>
-        <input type="text" class="form-control" id="firstnameProf" value="<?php echo $_SESSION['u_first'] ?>">
+        <input name="firstnameProf" type="text" class="form-control" id="firstnameProf" value="<?php echo $_SESSION['u_first'] ?>">
       </div>
       <hr />
-      <button type="submit" class="btn btn-success float-right">Submit</button>
+      <button name="profile-submit" type="submit" class="btn btn-success float-right">Submit</button>
     </fieldset>
   </form>
 </div>
