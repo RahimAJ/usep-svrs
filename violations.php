@@ -28,7 +28,14 @@ $violations_array = mysqli_query($conn, "SELECT * FROM violations");
                     <td><?php echo $row['student_id']; ?></td>
                     <td><?php echo $row['details']; ?></td>
                     <td><?php echo $row['date_created']; ?></td>
-                    <td><?php echo $row['created_by']; ?></td>
+                    <td>
+                        <?php
+                        $user_id = $row['created_by'];
+                        $result = mysqli_query($conn, "SELECT * FROM users WHERE id = '$user_id';");
+                        $row_userID = mysqli_fetch_array($result);
+                        echo $row_userID['username'];
+                        ?>
+                    </td>
                     <td><?php echo $row['remarks']; ?></td>
                 </tr>
             <?php

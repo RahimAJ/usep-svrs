@@ -34,7 +34,7 @@ $violations_array = mysqli_query($conn, "SELECT * FROM courses");
                         $course_id = $row['course_id'];
                         $result = mysqli_query($conn, "SELECT violations.student_id FROM violations
                         LEFT JOIN students ON students.student_id = violations.student_id
-                        WHERE students.course_id = '$course_id';");
+                        WHERE (students.course_id = '$course_id') AND (violations.deleted IS NULL);");
                         echo mysqli_num_rows($result);
                         ?>
                     </td>

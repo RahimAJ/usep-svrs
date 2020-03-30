@@ -31,6 +31,7 @@ if (isset($_POST['login-submit'])) {
                     $result = mysqli_query($conn, $sql);
                     $row = mysqli_fetch_assoc($result);
 
+                    $_SESSION['u_id'] = $row['id'];
                     $_SESSION['u_uid'] = $row['username'];
                     $_SESSION['u_last'] = $row['lastname'];
                     $_SESSION['u_first'] = $row['firstname'];

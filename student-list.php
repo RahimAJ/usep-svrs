@@ -30,7 +30,7 @@ $violations_array = mysqli_query($conn, "SELECT * FROM students");
           <td>
             <?php
             $student_id = $row['student_id'];
-            $result = mysqli_query($conn, "SELECT * FROM violations WHERE student_id = '$student_id';");
+            $result = mysqli_query($conn, "SELECT * FROM violations WHERE (student_id = '$student_id') AND (deleted IS NULL);");
             echo mysqli_num_rows($result);
             ?>
           </td>
