@@ -2,7 +2,7 @@
 
 require 'dbh-inc.php';
 
-$profileID = $_SESSION['u_uid'];
+$profileID = $_SESSION['u_id'];
 
 /**
  * HANDLERS FOR INSERT IN HOMEPAGE
