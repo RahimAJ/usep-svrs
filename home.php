@@ -2,6 +2,54 @@
 <?php include('templates/navbar.php') ?>
 <?php include('includes/home-inc.php') ?>
 
+<?php
+echo '<script language="javascript">
+  ';
+if (isset($_GET['violation'])) {
+  $violation = $_GET['violation'];
+  switch ($violation) {
+    case 'emptyfields':
+      echo 'alert("Violation - Please fill in all fields!")';
+      break;
+    case 'studentnotfound':
+      echo 'alert("Student not found!")';
+      break;
+    case 'violationadded':
+      echo 'alert("Violation successfully added!")';
+      break;
+  }
+}
+
+if (isset($_GET['student'])) {
+  $student = $_GET['student'];
+  switch ($student) {
+    case 'emptyfields':
+      echo 'alert("Student - Please fill in all fields!")';
+      break;
+    case 'coursenotfound':
+      echo 'alert("Course not found!")';
+      break;
+    case 'studentadded':
+      echo 'alert("Student successfully added!")';
+      break;
+  }
+}
+
+if (isset($_GET['course'])) {
+  $course = $_GET['course'];
+  switch ($course) {
+    case 'emptyfields':
+      echo 'alert("Course - Please fill in all fields!")';
+      break;
+    case 'courseadded':
+      echo 'alert("Course successfully added!")';
+      break;
+  }
+}
+echo '
+</script>';
+?>
+
 <div class="container mt-4">
   <div class="container py-3">
     <div class="row">
