@@ -12,7 +12,7 @@ if (isset($_GET['violation'])) {
       echo 'alert("Violation - Please fill in all fields!")';
       break;
     case 'studentnotfound':
-      echo 'alert("Student not found!")';
+      echo 'alert("Student not found!\nPlease add the student first!")';
       break;
     case 'violationadded':
       echo 'alert("Violation successfully added!")';
@@ -27,7 +27,7 @@ if (isset($_GET['student'])) {
       echo 'alert("Student - Please fill in all fields!")';
       break;
     case 'coursenotfound':
-      echo 'alert("Course not found!")';
+      echo 'alert("Course not found!\nPlease add the course first!")';
       break;
     case 'studentadded':
       echo 'alert("Student successfully added!")';

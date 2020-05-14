@@ -28,12 +28,11 @@
                 </div>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0 pl-4">
+        <form method="GET" action="search.php" class="form-inline my-2 my-lg-0 pl-4">
             <label for="searchSelect">Search by:</label>
             <select name="searchType" class="form-control ml-1 mr-1" id="searchSelect">
-                <option>ID</option>
-                <option>Name</option>
-                <option>College</option>
+                <option value="student_id">ID</option>
+                <option value="name">Name</option>
             </select>
             <input name="searchInput" class="form-control mr-sm-2" type="text">
             <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
