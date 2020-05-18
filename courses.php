@@ -19,7 +19,7 @@ $violations_array = mysqli_query($conn, "SELECT * FROM courses");
         </thead>
         <tbody>
             <?php while ($row = mysqli_fetch_array($violations_array)) { ?>
-                <tr onclick="window.location='courses.php?course-id=<?php echo $row['course_id']; ?>'">
+                <tr onclick="window.location='edit/course.php?course-id=<?php echo $row['course_id']; ?>'">
                     <td><?php echo $row['course_id']; ?></td>
                     <td><?php echo $row['course_name']; ?></td>
                     <td>

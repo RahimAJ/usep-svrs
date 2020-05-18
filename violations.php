@@ -23,7 +23,7 @@ $violations_array = mysqli_query($conn, "SELECT * FROM violations");
             <?php while ($row = mysqli_fetch_array($violations_array)) {
                 if ($row['deleted'] != NULL)
                     continue; ?>
-                <tr onclick="window.location='violations.php?violation-id=<?php echo $row['id']; ?>'">
+                <tr onclick="window.location='edit/violation.php?violation-id=<?php echo $row['id']; ?>'">
                     <td><?php echo $row['id']; ?></td>
                     <td><?php echo $row['student_id']; ?></td>
                     <td><?php echo $row['details']; ?></td>
