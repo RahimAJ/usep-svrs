@@ -96,3 +96,66 @@ if (isset($_POST['course-update'])) {
         header("Location: ../edit/course.php?course-id=" . $courseID);
     }
 }
+
+/**
+ * DELETE METHODS
+ */
+
+ if (isset($_POST['student-delete'])){
+    $mainID = mysqli_real_escape_string($conn, $_POST['main_ID']);
+    $date = date('Y-m-d H:i:s');
+
+    $delete_student_sql = "UPDATE students SET
+    deleted = '$date'
+    WHERE id = '$mainID';
+    ";
+
+    mysqli_query($conn, $delete_student_sql);
+
+    header("Location: ../student-list.php?deleted=" . $mainID);
+ }
+
+if (isset($_POST['violation-delete'])) {
+    $mainID = mysqli_real_escape_string($conn, $_POST['main_ID']);
+    $date = date('Y-m-d H:i:s');
+
+    $delete_violation_sql = "UPDATE violations SET
+    deleted = '$date'
+    WHERE id = '$mainID';
+    ";
+
+    mysqli_query($conn, $delete_violation_sql);
+
+    header("Location: ../violations.php?deleted=" . $mainID);
+}
+
+/**
+ * RECOVER METHODS
+ */
+
+if (isset($_POST['student-recover'])) {
+    $mainID = mysqli_real_escape_string($conn, $_POST['main_ID']);
+    $studentID = mysqli_real_escape_string($conn, $_POST['student_studentID']);
+
+    $recover_student_sql = "UPDATE students SET
+    deleted = NULL
+    WHERE id = '$mainID';
+    ";
+
+    mysqli_query($conn, $recover_student_sql);
+
+    header("Location: ../edit/student.php?student-id=" . $studentID);
+}
+
+if (isset($_POST['violation-recover'])) {
+    $mainID = mysqli_real_escape_string($conn, $_POST['main_ID']);
+
+    $recover_violation_sql = "UPDATE violations SET
+    deleted = NULL
+    WHERE id = '$mainID';
+    ";
+
+    mysqli_query($conn, $recover_violation_sql);
+
+    header("Location: ../edit/violation.php?violation-id=" . $mainID);
+}

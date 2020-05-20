@@ -3,7 +3,7 @@
 
 <?php
 include('includes/dbh-inc.php');
-$violations_array = mysqli_query($conn, "SELECT * FROM courses");
+$courses_array = mysqli_query($conn, "SELECT * FROM courses");
 ?>
 
 <div class="container mt-4">
@@ -18,7 +18,7 @@ $violations_array = mysqli_query($conn, "SELECT * FROM courses");
             </tr>
         </thead>
         <tbody>
-            <?php while ($row = mysqli_fetch_array($violations_array)) { ?>
+            <?php while ($row = mysqli_fetch_array($courses_array)) { ?>
                 <tr onclick="window.location='edit/course.php?course-id=<?php echo $row['course_id']; ?>'">
                     <td><?php echo $row['course_id']; ?></td>
                     <td><?php echo $row['course_name']; ?></td>

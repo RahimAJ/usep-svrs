@@ -19,6 +19,13 @@
                 <a class="nav-link" href="./courses.php">Courses</a>
             </li>
             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Trash</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="./trash/violations.php">Violations</a>
+                    <a class="dropdown-item" href="./trash/students.php">Students</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Account</a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="./account/profile.php">Profile</a>
@@ -42,6 +49,6 @@
 
 <?php
 if (isset($_SESSION['u_uid'])) {
-    echo "<small class='pl-4 text-secondary' style='float:none;z-index:10000'>You are logged in as: ". $_SESSION['u_first'] . " " . $_SESSION['u_last'] . " (" . $_SESSION['u_uid'] . ") " ."</small>";
+    echo "<small class='pl-4 text-secondary' style='float:none;z-index:10000'>You are logged in as: " . $_SESSION['u_first'] . " " . $_SESSION['u_last'] . " (" . $_SESSION['u_uid'] . ") " . "</small>";
 }
 ?>

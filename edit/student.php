@@ -49,6 +49,13 @@ if (isset($_GET['student-id'])) {
               <input name="student_course" type="text" class="form-control" id="student_course" value="<?php echo $row['course_id'] ?>">
             </div>
             <hr />
+            <?php 
+              if($row['deleted'] != NULL){
+                echo '<button name="student-recover" type="submit" class="btn btn-warning float-left">Recover Student</button>';
+            } else {
+                echo '<button name="student-delete" type="submit" class="btn btn-danger float-left">Delete Student</button>';
+              }
+            ?>
             <button name="student-update" type="submit" class="btn btn-success float-right">Update Student</button>
           </form>
         <?php } ?>

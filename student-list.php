@@ -3,7 +3,7 @@
 
 <?php
 include('includes/dbh-inc.php');
-$violations_array = mysqli_query($conn, "SELECT * FROM students");
+$students_array = mysqli_query($conn, "SELECT * FROM students");
 ?>
 
 <div class="container mt-4">
@@ -19,7 +19,7 @@ $violations_array = mysqli_query($conn, "SELECT * FROM students");
       </tr>
     </thead>
     <tbody>
-      <?php while ($row = mysqli_fetch_array($violations_array)) {
+      <?php while ($row = mysqli_fetch_array($students_array)) {
         if ($row['deleted'] != NULL)
           continue; ?>
         <tr onclick="window.location='edit/student.php?student-id=<?php echo $row['student_id']; ?>'">

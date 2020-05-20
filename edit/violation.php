@@ -52,6 +52,13 @@ if (isset($_GET['violation-id'])) {
               <input name="date_created" type="text" class="form-control" id="date_created" value="<?php echo $row['date_created'] ?>">
             </div>
             <hr />
+            <?php
+            if ($row['deleted'] != NULL) {
+              echo '<button name="violation-recover" type="submit" class="btn btn-warning float-left">Recover Violation</button>';
+            } else {
+              echo '<button name="violation-delete" type="submit" class="btn btn-danger float-left">Delete Violation</button>';
+            }
+            ?>
             <button name="violation-update" type="submit" class="btn btn-success float-right">Update Violation</button>
           </form>
         <?php } ?>
